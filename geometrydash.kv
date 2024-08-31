@@ -1,0 +1,40 @@
+<GeometryDashGame>:
+    player: player
+    obstacle: obstacle
+
+    Player:
+        id: player
+        size: 50, 50
+        pos: 100, 100
+        canvas:
+            Color:
+                rgba: 1, 0, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Obstacle:
+        id: obstacle
+        size: 50, 200
+        pos: self.width, 0
+        canvas:
+            Color:
+                rgba: 0, 1, 0, 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+    Label:
+        text: root.score_text
+        size_hint: None, None
+        size: 100, 50
+        pos: 10, root.height - 50
+        font_size: 20
+
+<Player>:
+    size: 50, 50
+    pos: 100, 100
+
+<Obstacle>:
+    size: 50, 200
+    pos: 600, 0
